@@ -5,6 +5,21 @@ public class Produto{
     private double custo = 0.00; 
     private double valor = 0.00;
 
+        public Produto () {
+        }
+
+        public Produto (String cod, String desc) {
+            this.codigo = cod;
+            this.descricao = desc;
+        }
+
+        public Produto(String cod, String desc, double c, double val) {
+            this.codigo = cod; 
+            this.descricao = desc;
+            this.custo = c;
+            this.valor = val;
+        }
+
         public String getCodigo(){
             return codigo;
         }           
