@@ -1,15 +1,12 @@
 public class TestaProduto {
     public static void main (String args[]) {
-        Produto p = new Produto();
-        p.setCodigo(args[0]);
-        p.setDescricao(args[1]);
-        p.setCusto(Double.parseDouble(args[2]));
-        p.setValor(Double.parseDouble(args[3]));
-        p.mostraProduto();
-        Produto p = new Produto();
-        p.verificaMargem();
-        if(!this.verificaMargem()){
-            throw new IllegalArgumentException("Margem inferior à 20%");
-        }
+        Produto p1 = new Produto();
+        p1.mostraProduto();
+
+        Produto p2 = new Produto(args[0],args[1]) ;
+        p2.mostraProduto();
+
+        Produto p3 = new Produto(args[0], args[1], Double.parseDouble(args[2]), Double.parseDouble(args[3]));
+        p3.mostraProduto();
     }
 }

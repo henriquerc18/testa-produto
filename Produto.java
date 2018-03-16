@@ -18,8 +18,11 @@ public class Produto{
             this.descricao = desc;
             this.custo = c;
             this.valor = val;
+            if(!this.verificaMargem()) {
+                throw new IllegalArgumentException("Margem inferior à 20%");
+            }
         }
-
+        
         public String getCodigo(){
             return codigo;
         }           
